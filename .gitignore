@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -18,10 +19,41 @@ hs_err_pid*
 # OSX
 # =========================
 
+=======
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+>>>>>>> 3110327f73e7903afc7bbb55203002f6f5ddc068
 .DS_Store
 .AppleDouble
 .LSOverride
 
+<<<<<<< HEAD
+=======
+# Icon must end with two \r
+Icon
+
+>>>>>>> 3110327f73e7903afc7bbb55203002f6f5ddc068
 # Thumbnails
 ._*
 
@@ -35,6 +67,7 @@ hs_err_pid*
 Network Trash Folder
 Temporary Items
 .apdisk
+<<<<<<< HEAD
 
 # Windows
 # =========================
@@ -57,3 +90,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+=======
+>>>>>>> 3110327f73e7903afc7bbb55203002f6f5ddc068
