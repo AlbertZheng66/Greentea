@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+  
+  <menus>
+      <menu title="test1" /> 
+      <menu title="test2" /> 
+      <menu title="test3" /> 
+      <menu title="test6">
+          <menu title="test61" action="com.itown.framework.rcp.swing.demo.base.CustomizedTablePanel" /> 
+          <menu title="test62" action="com.itown.framework.rcp.swing.demo.base.CustomizedTablePanel" /> 
+          <menu title="test63" action="com.itown.framework.rcp.swing.demo.base.CustomizedTablePanel" /> 
+      </menu> 
+  </menus>
+
+</xt-config>

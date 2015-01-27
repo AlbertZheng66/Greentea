@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+    <table name="t_user" schema=""/>
+    <property name="userName" type="String">
+        <column name="user_name" type="varchar(20)">
+            <dictionary name="nation_code">
+            </dictionary>
+        </column>
+    </property>
+    <property name="i1">
+        <column name="password" type="varchar(20)" primaryKey="true"/>
+    </property>
+    <property name="l1">
+        <column name="password" type="varchar(20)"/>
+    </property>
+</mapping>

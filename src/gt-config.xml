@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+   
+  <databases default="test">
+      <database id="test" type="jdbc" >
+          <param name="user"     value="sa" /> 
+          <param name="password" value="" /> 
+          <param name="schema"   value="PUBLIC" /> 
+          <param name="url"      value="jdbc:hsqldb:file:./db/auction_mgr" /> 
+          <param name="driver"   value="org.hsqldb.jdbcDriver" />  
+      </database>
+      <database id="dev" type="jdbc" >
+          <param name="user"     value="demo" /> 
+          <param name="password" value="demo" /> 
+          <param name="schema"   value="DEMO" /> 
+          <param name="url"      value="jdbc:derby://localhost:1527/demo" /> 
+          <param name="driver"   value="org.apache.derby.jdbc.ClientDriver" />  
+      </database>
+  </databases>
+   
+  <system>
+       <param name="sysBasePackage"  value="com.xxx.demo" /> 
+       <param name="sysJspBasePath" value="/jsp" />  
+       <param name="dateFormat"       value="yyyy-MM-dd" /> <!-- 日期的显示和解析格式 --> 
+       <param name="errorScreen"      value="/error.jsp"/> <!-- 发生严重错误时调整的页面（比如基于SystemException的异常） --> 
+       <param name="screenFlowFile"  value="/WEB-INF/gt-screen-flow.xml"/> <!-- 屏幕流文件 --> 
+       <param name="monthFormat"       value="yyyyMM" />
+       <param name="ajaxEncoding"           value="UTF-8" />
+       <param name="paginationPageSize"    value="1000" />
+       <param name="table.defaultRowHeight"    value="25" />
+       <param name="table.modifyAnnotationAccessible"    value="true" />
+       <!---->
+       <param name="loginDialog"          value="com.xt.swing.demo.login.LoginDialog" />
+       
+       <param name="login.maxTryCount"    value="2" />
+
+       <param name="servletInits" type="list">
+          <data value="com.xt.core.app.init.AppContext" />
+       </param>
+       <param name="parsers" type="map">
+          <entry key="databases" value="com.xt.gt.sys.impl.DataBaseParameterParser" />
+          <!--
+          <entry key="menus"    value="com.xt.gt.client.menu.MenuParser" />
+          -->
+       </param>
+       <param name="processorFactories" type="list">
+          <data value="com.xt.core.proc.impl.IPOPersistenceProcessorFactory" />
+       </param>
+  </system>
+  
+  <!-- 扩展标签，用于将不同模块（子系统）的配置分别存在在不同的配置文件中，便于管理和共享。
+       注意，子模块也可能使用扩展标签，因此一定要避免循环引用。 -->
+  <extensions>
+      <extension fileName1="/gt-config-menus.xml" />
+  </extensions>
+
+ 
+</xt-config>

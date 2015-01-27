@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping name="com.myco.test.User">
+    <table name="t_user" schema=""/>
+    <property name="userName" type="String">
+        <column name="user_name" type="varchar(20)">
+            <dictionary name="nation_code">
+            </dictionary>
+        </column>
+    </property>
+    <property name="password">
+        <column name="password" type="varchar(20)" primaryKey="true"/>
+    </property>
+    <property name="email">
+        <column name="password" type="varchar(20)"/>
+    </property>
+    <property name="age" type="int">
+        <column name="age" type="Integer"/>
+    </property>
+    <collection name="bids" type="com.anotherclass">
+        <table name="t_bid" lazy="true" inverse="true" cascade="save-update"/>
+    </collection>
+</mapping>

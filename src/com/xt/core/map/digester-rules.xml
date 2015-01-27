@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<digester-rules>
+    <pattern value="mapping">
+        <object-create-rule classname="com.myco.core.map.MappingClass">
+        <pattern value="mapping/table">
+            <object-create-rule classname="com.myco.core.db.meta.TableMeta"/>
+            <set-next-rule methodname="addProperty" paramtype="com.myco.core.map.Property"/>
+            <set-properties-rule/>
+            <bean-property-setter-rule pattern="name"/>
+            <bean-property-setter-rule pattern="type" propertyname="type"/>
+        </pattern>
+        <!--
+        <set-next-rule methodname="add" paramtype="java.lang.Object"/>
+        -->
+        <set-properties-rule/>
+
+          <bean-property-setter-rule pattern="name"/>
+          <bean-property-setter-rule pattern="summary"/>
+          <bean-property-setter-rule pattern="author"/>
+
+        <!-- Nested Pattern for Characters -->
+        <pattern value="properties/property">
+            <object-create-rule classname="com.myco.core.map.Property"/>
+            <set-next-rule methodname="addProperty" paramtype="com.myco.core.map.Property"/>
+            <set-properties-rule/>
+            <bean-property-setter-rule pattern="name"/>
+            <bean-property-setter-rule pattern="type" propertyname="type"/>
+        </pattern>
+        </object-create-rule>
+    </pattern>
+</digester-rules>
