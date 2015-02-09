@@ -2,7 +2,7 @@
 <HTML>
 <HEAD>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-	<TITLE>Greentea Framework</TITLE>
+	<TITLE></TITLE>
 </HEAD>
 <BODY >
 	<H3> INTRODUCTION
