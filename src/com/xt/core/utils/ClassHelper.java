@@ -14,6 +14,8 @@ import com.xt.core.exception.SystemException;
 import java.security.CodeSource;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
 
 /**
  * <p>Title: XT框架-工具-类辅助类</p>
@@ -526,7 +528,7 @@ public class ClassHelper {
     }
     
     public static List<Field> getFields(Class clazz, boolean recursive) {
-        List<Field> fields = new ArrayList();
+        Set<Field> fields = new HashSet();
         fields.addAll(Arrays.asList(clazz.getDeclaredFields()));
 
         if (recursive) {
@@ -746,7 +748,7 @@ public class ClassHelper {
      * @return String[] 所有的属性名称
      */
     public static String[] getPropertyNames(Class clazz, boolean recursive) {
-        ArrayList<String> fieldNames = new ArrayList<String>();
+        Set<String> fieldNames = new HashSet<String>();
         String[] currentPropertNames = getPropertyNames(clazz);
         for (String propertyName : currentPropertNames) {
             fieldNames.add(propertyName);
